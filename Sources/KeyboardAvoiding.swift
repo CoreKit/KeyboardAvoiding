@@ -13,6 +13,13 @@ open class KeyboardAvoiding {
     open var showAnimationBlock: ((CGRect) -> Void)?
     open var hideAnimationBlock: (() -> Void)?
 
+    public init(_ showAnimationBlock: ((CGRect) -> Void)? = nil,
+                _ hideAnimationBlock: (() -> Void)? = nil) {
+
+        self.showAnimationBlock = showAnimationBlock
+        self.hideAnimationBlock = hideAnimationBlock
+    }
+
     open func start() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.onKeyboardShow(_:)),
