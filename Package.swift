@@ -19,8 +19,5 @@ let package = Package(
             name: "KeyboardAvoiding",
             dependencies: [],
             path: "./Sources"),
-        .testTarget(
-            name: "KeyboardAvoidingTests",
-            dependencies: ["KeyboardAvoiding"]),
     ]
 )
