@@ -2,27 +2,12 @@
 
 Watch out ! We've got a keyboard here!
 
-
-
 ## Installation
 
 ### Swift Package Manager
 
 ```
 .package(url: "https://github.com/CoreKit/KeyboardAvoiding", from: "1.0.0"),
-```
-
-### CocoaPods
-
-```
-source 'https://github.com/CoreKit/KeyboardAvoiding.git'
-pod 'KeyboardAvoiding'
-```
-
-### Carthage
-
-```
-github "CoreKit/KeyboardAvoiding" "1.0.0"
 ```
 
 ## Usage
@@ -38,12 +23,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.keyboardAvoiding = KeyboardAvoiding({ rect in
-            //do your stuff on show keyboard
-        }, {
-            //do your stuff on hide keyboard
-        })
+        self.keyboardAvoiding = KeyboardAvoiding()
+        .onKeyboardWillShow { rect in
+            // do your stuff here 
+        }
+        .onKeyboardDidShow { rect in
+            // do your stuff here
+        }
+        .onKeyboardWillHide {
+            // do your stuff here
+        }
+        .onKeyboardDidHide {
+            // do your stuff here
+        }
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
