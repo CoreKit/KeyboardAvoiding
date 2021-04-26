@@ -1,6 +1,6 @@
-# CoreKit KeyboardAvoiding
+# KeyboardAvoiding
 
-Watch out ! We've got a keyboard here!
+Easy to use keyboard avoiding library.
 
 ## Installation
 
@@ -51,8 +51,3 @@ class ViewController: UIViewController {
     }
 }
 ```
-
-
-## License
-
-[WTFPL](LICENSE) - Do what the fuck you want to.

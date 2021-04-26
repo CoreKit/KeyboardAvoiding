@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -7,17 +7,9 @@ let package = Package(
        .iOS(.v12),
     ],
     products: [
-        .library(
-            name: "KeyboardAvoiding",
-            targets: ["KeyboardAvoiding"]),
-    ],
-    dependencies: [
-
+        .library(name: "KeyboardAvoiding", targets: ["KeyboardAvoiding"]),
     ],
     targets: [
-        .target(
-            name: "KeyboardAvoiding",
-            dependencies: [],
-            path: "./Sources"),
+        .target(name: "KeyboardAvoiding"),
     ]
 )

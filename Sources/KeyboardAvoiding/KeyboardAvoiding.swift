@@ -5,7 +5,7 @@
 //  Created by Tibor Bödecs on 2019. 02. 11..
 //  Copyright © 2019. Tibor Bödecs. All rights reserved.
 //
-
+#if(canImport(UIKit))
 import UIKit
 
 open class KeyboardAvoiding {
@@ -139,3 +139,4 @@ open class KeyboardAvoiding {
         }
     }
 }
+#endif
